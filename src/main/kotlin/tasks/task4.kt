@@ -1,29 +1,32 @@
 package tasks
 
-/*
-Написать функцию, которая для двух целых чисел возвращает
-«первое число больше» если первое больше,
-«второе число больше» если второе больше и «числа равны», если они равны*/
+/*2. В программе каршеринга в зависимости от возраста
+и стажа водителя доступны разные авто. Озвучены следующие требования.
 
+Общие требования:
 
-fun main() {
-    val number1: Int = readln().toInt()
-    val number2: Int = readln().toInt()
+· Возраст не меньше 21 года.
 
-    val maxNumber: String = getStringMaxNumber(number1, number2)
-    println(maxNumber)
+· Водительский стаж категории «В» от двух лет.
 
-}
+Дополнительные требования для доступа к автомобилям Audi, BMW:
 
-fun getStringMaxNumber(n1: Int, n2: Int): String {
-    return  if (n1 > n2)
-        "первое число больше"
-    else if (n1 < n2)
-        "второе число больше"
-    else
-        "числа равны"
+· Возраст не меньше 26 лет.
 
+· Водительский стаж категории «В» от шести лет.
 
+На вход приходит возраст и стаж водителя. Вывести сообщение о том,
+может ли он пользоваться каршерингом и какие авто ему доступны.*/
 
+fun main () {
+    val userName:String = readln()
+    val userAge:Int = readln().toInt()
+    val userExperience:Int = readln().toInt()
+
+    when{
+        userAge >= 26 && userExperience >= 6 -> println("$userName, вам доступны все автомобили")
+        userAge >= 21 && userExperience >= 2 -> println("$userName, вам доступны все, кроме Audi и BMW")
+        else -> println("$userName, вам автомобили не доступны")
+    }
 
 }
