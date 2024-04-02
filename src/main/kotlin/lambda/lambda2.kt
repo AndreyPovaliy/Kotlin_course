@@ -2,14 +2,18 @@ package lambda
 
 
 fun main() {
+//    ввести данные
     val user1 = User("Kirill", 23)
     val user2 = User("Olga", 17)
     val user3 = User("Ivan", 32)
     val user4 = User("Oleg", 21)
 
+    //    объединить данные
     val users = listOf(user1, user2, user3, user4)
 
+    //    объединить данные
     val filteredUsers = filterByCondition(users) { it.age > 18 }
+
     println(filteredUsers)
 }
 
