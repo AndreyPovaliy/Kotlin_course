@@ -8,10 +8,10 @@ fun main() {
     val user3 = User("Ivan", 32)
     val user4 = User("Oleg", 21)
 
-    //    объединить данные
+    //    объединить данные в коллекцию
     val users = listOf(user1, user2, user3, user4)
 
-    //    объединить данные
+    //    применение функции
     val filteredUsers = filterByCondition(users) { it.age > 18 }
 
     println(filteredUsers)
