@@ -1,4 +1,4 @@
-package tasks
+package tasks1
 
 fun main() {
     val user1 = User("Kirill", 28, 9)

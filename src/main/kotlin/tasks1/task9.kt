@@ -1,4 +1,4 @@
-package tasks
+package tasks1
 
 /*Дан класс, описывающий сотрудника:
 data class Employee(val name: String, val age: Int)
